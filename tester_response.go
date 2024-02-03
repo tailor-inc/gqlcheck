@@ -40,3 +40,19 @@ func (tt *Tester) HasError() *Tester {
 func (tt *Tester) HasNoError() *Tester {
 	return &Tester{client: tt.client.NotMatchesJSONQuery(`.errors`)}
 }
+
+func (tt *Tester) HasJSON(expected any) *Tester {
+	return &Tester{client: tt.client.HasJSON(expected)}
+}
+
+func (tt *Tester) HasData(expected any) *Tester {
+	return &Tester{client: tt.client.HasJSON(map[string]any{"data": expected})}
+}
+
+func (tt *Tester) HasErrors(expected []any) *Tester {
+	return &Tester{client: tt.client.HasJSON(map[string]any{"errors": expected})}
+}
+
+func (tt *Tester) ContainsString(s string) *Tester {
+	return &Tester{client: tt.client.ContainsString(s)}
+}
