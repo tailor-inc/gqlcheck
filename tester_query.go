@@ -1,8 +1,15 @@
 package gqlcheck
 
+import "encoding/json"
+
 type Query struct {
 	Query     string         `json:"query"`
-	Variables map[string]any `json:"variables"`
+	Variables map[string]any `json:"variables,omitempty"`
+}
+
+func (q Query) String() string {
+	b, _ := json.MarshalIndent(q, "", "  ")
+	return string(b)
 }
 
 func (tt *Tester) Request(q Query) *Tester {

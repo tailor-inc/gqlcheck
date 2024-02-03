@@ -10,8 +10,13 @@ import (
 )
 
 type Response struct {
-	Data   map[string]any
-	Errors []map[string]any
+	Data   map[string]any   `json:"data,omitempty"`
+	Errors []map[string]any `json:"errors,omitempty"`
+}
+
+func (r Response) String() string {
+	b, _ := json.MarshalIndent(r, "", "  ")
+	return string(b)
 }
 
 func (tt *Tester) Cb(callback func(*http.Response)) {
