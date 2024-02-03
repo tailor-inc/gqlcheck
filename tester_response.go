@@ -24,8 +24,7 @@ func (tt *Tester) Response(out *Response) {
 		b, err := io.ReadAll(resp.Body)
 		require.NoError(t, err)
 		assert.NoError(t, resp.Body.Close())
-		var ret Response
-		require.NoError(t, json.Unmarshal(b, &ret))
+		require.NoError(t, json.Unmarshal(b, &out))
 	})
 }
 
