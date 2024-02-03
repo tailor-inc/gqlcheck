@@ -19,6 +19,10 @@ func ClientTimeout(d time.Duration) Option {
 	return httpcheck.ClientTimeout(d)
 }
 
+func Debug() Option {
+	return httpcheck.Debug()
+}
+
 // New returns a new Checker for the given handler.
 func New(h http.Handler, opts ...Option) *Checker {
 	return &Checker{client: httpcheck.New(h, opts...)}
