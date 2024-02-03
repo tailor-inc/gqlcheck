@@ -1,7 +1,7 @@
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/ikawaha/httpcheck v1.12.0 h1:FPvj7zUmXdQeUTqaGBbynT0UEVgUZOr8zNCzJK+7KPA=
-github.com/ikawaha/httpcheck v1.12.0/go.mod h1:nniPQtxrpgte1MmLZC4TL5gjqEn/P0A+8djBUOa1gXk=
+github.com/ikawaha/httpcheck v1.12.1 h1:1LKyqEES9aTX8R04Qs1HmwntrrJHENPD/W0vS1akr6E=
+github.com/ikawaha/httpcheck v1.12.1/go.mod h1:nniPQtxrpgte1MmLZC4TL5gjqEn/P0A+8djBUOa1gXk=
 github.com/itchyny/gojq v0.12.14 h1:6k8vVtsrhQSYgSGg827AD+PVVaB1NLXEdX+dda2oZCc=
 github.com/itchyny/gojq v0.12.14/go.mod h1:y1G7oO7XkcR1LPZO59KyoCRy08T3j9vDYRV0GgYSS+s=
 github.com/itchyny/timefmt-go v0.1.5 h1:G0INE2la8S6ru/ZI5JecgyzbbJNs5lG1RcBqa7Jm6GE=

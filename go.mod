@@ -3,7 +3,7 @@ module github.com/ikawaha/gqlcheck
 go 1.21.5
 
 require (
-	github.com/ikawaha/httpcheck v1.12.0
+	github.com/ikawaha/httpcheck v1.12.1
 	github.com/stretchr/testify v1.8.4
 )
 
