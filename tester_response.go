@@ -32,3 +32,7 @@ func (tt *Tester) Response(out *Response) {
 func (tt *Tester) HasError() *Tester {
 	return &Tester{client: tt.client.MatchesJSONQuery(`.errors`)}
 }
+
+func (tt *Tester) HasNoError() *Tester {
+	return &Tester{client: tt.client.NotMatchesJSONQuery(`.errors`)}
+}
