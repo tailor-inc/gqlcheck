@@ -23,7 +23,7 @@ func (tt *Tester) Cb(callback func(*http.Response)) {
 	tt.client.Cb(callback)
 }
 
-func (tt *Tester) Response(out *Response) {
+func (tt *Tester) Response(out any) {
 	t := tt.client.T()
 	tt.client.Cb(func(resp *http.Response) {
 		b, err := io.ReadAll(resp.Body)
@@ -33,11 +33,11 @@ func (tt *Tester) Response(out *Response) {
 	})
 }
 
-func (tt *Tester) HasError() *Tester {
+func (tt *Tester) HasErrors() *Tester {
 	return &Tester{client: tt.client.MatchesJSONQuery(`.errors`)}
 }
 
-func (tt *Tester) HasNoError() *Tester {
+func (tt *Tester) HasNoErrors() *Tester {
 	return &Tester{client: tt.client.NotMatchesJSONQuery(`.errors`)}
 }
 
@@ -47,10 +47,6 @@ func (tt *Tester) HasJSON(expected any) *Tester {
 
 func (tt *Tester) HasData(expected any) *Tester {
 	return &Tester{client: tt.client.HasJSON(map[string]any{"data": expected})}
-}
-
-func (tt *Tester) HasErrors(expected []any) *Tester {
-	return &Tester{client: tt.client.HasJSON(map[string]any{"errors": expected})}
 }
 
 func (tt *Tester) ContainsString(s string) *Tester {
