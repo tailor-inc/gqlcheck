@@ -1,4 +1,4 @@
-gqlcheck: Graphql testing library
+gqlcheck: GraphQL testing library
 ===
 
 gqlcheck is a library for testing GraphQL servers.   
@@ -46,5 +46,6 @@ OUTPUT:
 PASS
 ```
 
-===
+---
+
 MIT
