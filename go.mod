@@ -1,4 +1,4 @@
-module github.com/ikawaha/gqlcheck
+module github.com/tailor-inc/gqlcheck
 
 go 1.21.5
 
