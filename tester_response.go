@@ -2,10 +2,10 @@ package gqlcheck
 
 import (
 	"encoding/json"
+	"fmt"
 	"io"
 	"net/http"
 
-	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
 
@@ -17,7 +17,10 @@ type Response struct {
 
 // String returns the string representation of the response.
 func (r Response) String() string {
-	b, _ := json.MarshalIndent(r, "", "  ")
+	b, err := json.MarshalIndent(r, "", "  ")
+	if err != nil {
+		return fmt.Sprintf("%v", r)
+	}
 	return string(b)
 }
 
@@ -32,7 +35,7 @@ func (tt *Tester) Response(out any) {
 	tt.client.Cb(func(resp *http.Response) {
 		b, err := io.ReadAll(resp.Body)
 		require.NoError(t, err)
-		assert.NoError(t, resp.Body.Close())
+		require.NoError(t, resp.Body.Close())
 		require.NoError(t, json.Unmarshal(b, &out))
 	})
 }

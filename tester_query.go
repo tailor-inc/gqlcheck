@@ -1,6 +1,9 @@
 package gqlcheck
 
-import "encoding/json"
+import (
+	"encoding/json"
+	"fmt"
+)
 
 // Query is a struct to represent a query.
 type Query struct {
@@ -10,7 +13,10 @@ type Query struct {
 
 // String returns the string representation of the query.
 func (q Query) String() string {
-	b, _ := json.MarshalIndent(q, "", "  ")
+	b, err := json.MarshalIndent(q, "", "  ")
+	if err != nil {
+		return fmt.Sprintf("%v", q)
+	}
 	return string(b)
 }
 
