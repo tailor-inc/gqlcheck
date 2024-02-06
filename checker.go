@@ -19,6 +19,7 @@ func ClientTimeout(d time.Duration) Option {
 	return httpcheck.ClientTimeout(d)
 }
 
+// Debug sets the debug mode.
 func Debug() Option {
 	return httpcheck.Debug()
 }
