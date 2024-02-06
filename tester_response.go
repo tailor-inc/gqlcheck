@@ -2,7 +2,6 @@ package gqlcheck
 
 import (
 	"encoding/json"
-	"fmt"
 	"io"
 	"net/http"
 
@@ -17,10 +16,7 @@ type Response struct {
 
 // String returns the string representation of the response.
 func (r Response) String() string {
-	b, err := json.MarshalIndent(r, "", "  ")
-	if err != nil {
-		return fmt.Sprintf("%v", r)
-	}
+	b, _ := json.MarshalIndent(r, "", "  ") //nolint:errchkjson
 	return string(b)
 }
 
