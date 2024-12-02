@@ -3,8 +3,8 @@ module github.com/tailor-inc/gqlcheck
 go 1.21.5
 
 require (
-	github.com/ikawaha/httpcheck v1.12.3
-	github.com/stretchr/testify v1.9.0
+	github.com/ikawaha/httpcheck v1.12.4
+	github.com/stretchr/testify v1.10.0
 )
 
 require (
