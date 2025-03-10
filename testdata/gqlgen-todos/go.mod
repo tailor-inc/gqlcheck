@@ -1,17 +1,19 @@
 module github.com/ikawaha/gqlgen-todos
 
-go 1.21.5
+go 1.22
+
+toolchain go1.24.1
 
 replace github.com/ikawaha/gqlcheck => ./../..
 
 require (
 	github.com/99designs/gqlgen v0.17.43
 	github.com/ikawaha/gqlcheck v0.0.0-20240302003839-06a38c1009ec
-	github.com/vektah/gqlparser/v2 v2.5.11
+	github.com/vektah/gqlparser/v2 v2.5.23
 )
 
 require (
-	github.com/agnivade/levenshtein v1.1.1 // indirect
+	github.com/agnivade/levenshtein v1.2.1 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.2 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/google/uuid v1.3.0 // indirect
