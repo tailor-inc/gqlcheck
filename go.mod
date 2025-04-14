@@ -1,6 +1,6 @@
 module github.com/tailor-inc/gqlcheck
 
-go 1.21.5
+go 1.23.0
 
 require (
 	github.com/ikawaha/httpcheck v1.12.4
