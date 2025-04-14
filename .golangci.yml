@@ -1,34 +1,59 @@
-run:
-
-issues:
-  exclude-use-default: false
-  exclude-rules:
-    - path: _test\.go
-      linters:
-        - gocyclo
-
+version: "2"
 linters:
   enable:
+    - asasalint
+    - bidichk
+    - bodyclose
+    - contextcheck
+    - durationcheck
+    - errchkjson
+    - errorlint
+    - gocheckcompilerdirectives
+    - gochecksumtype
     - gocyclo
-    - staticcheck
-    - govet
+    - gosmopolitan
+    - loggercheck
+    - makezero
+    - musttag
+    - nilerr
+    - nilnesserr
+    - protogetter
+    - reassign
+    - recvcheck
     - revive
+    - spancheck
+    - testifylint
+    - unparam
+    - zerologlint
   disable:
-    - maligned
-    - exhaustive
-    - noctx
     - asciicheck
-    - sqlclosecheck
-    - rowserrcheck
+    - exhaustive
     - gosec
-    - scopelint
-  presets:
-    - bugs
-    - unused
-    - format
-
-linters-settings:
-  gocyclo:
-    min-complexity: 15
-  errcheck:
-    ignore: fmt:.*,io/ioutil:^Read,^Close|^Write|^Shutdown
+    - noctx
+    - rowserrcheck
+    - sqlclosecheck
+  settings:
+    gocyclo:
+      min-complexity: 15
+  exclusions:
+    generated: lax
+    rules:
+      - linters:
+          - gocyclo
+        path: _test\.go
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
+formatters:
+  enable:
+    - gci
+    - gofmt
+    - gofumpt
+    - goimports
+  exclusions:
+    generated: lax
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
