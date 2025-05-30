@@ -6,9 +6,9 @@ import (
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/handler/transport"
 
-	"github.com/ikawaha/gqlcheck"
+	"github.com/tailor-inc/gqlcheck"
 
-	"github.com/ikawaha/gqlgen-todos/graph"
+	"github.com/tailor-inc/gqlgen-todos/graph"
 )
 
 func TestServer(t *testing.T) {
@@ -27,7 +27,7 @@ func TestServer(t *testing.T) {
 		Query(`query {todos {text}}`).
 		Check().
 		HasStatusOK().
-		HasNoError().
+		HasNoErrors().
 		HasData(map[string]any{
 			"todos": []any{},
 		})
