@@ -4,7 +4,7 @@ go 1.23.0
 
 require (
 	github.com/ikawaha/httpcheck v1.12.4
-	github.com/stretchr/testify v1.11.0
+	github.com/stretchr/testify v1.11.1
 )
 
 require (
