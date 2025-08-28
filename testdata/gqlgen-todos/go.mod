@@ -6,7 +6,7 @@ replace github.com/tailor-inc/gqlcheck => ./../..
 
 require (
 	github.com/99designs/gqlgen v0.17.78
-	github.com/tailor-inc/gqlcheck v0.0.0-00010101000000-000000000000
+	github.com/tailor-inc/gqlcheck v0.0.11
 	github.com/vektah/gqlparser/v2 v2.5.30
 )
 
@@ -24,7 +24,7 @@ require (
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/sosodev/duration v1.3.1 // indirect
-	github.com/stretchr/testify v1.10.0 // indirect
+	github.com/stretchr/testify v1.11.1 // indirect
 	github.com/urfave/cli/v2 v2.27.7 // indirect
 	github.com/xrash/smetrics v0.0.0-20240521201337-686a1a2994c1 // indirect
 	golang.org/x/mod v0.26.0 // indirect
