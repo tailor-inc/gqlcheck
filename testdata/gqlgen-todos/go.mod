@@ -5,7 +5,7 @@ go 1.23.0
 replace github.com/tailor-inc/gqlcheck => ./../..
 
 require (
-	github.com/99designs/gqlgen v0.17.78
+	github.com/99designs/gqlgen v0.17.79
 	github.com/tailor-inc/gqlcheck v0.0.0-00010101000000-000000000000
 	github.com/vektah/gqlparser/v2 v2.5.30
 )
