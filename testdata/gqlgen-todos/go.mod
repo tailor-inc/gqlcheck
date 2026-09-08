@@ -7,7 +7,7 @@ replace github.com/tailor-platform/gqlcheck => ./../..
 require (
 	github.com/99designs/gqlgen v0.17.94
 	github.com/tailor-platform/gqlcheck v0.0.0-00010101000000-000000000000
-	github.com/vektah/gqlparser/v2 v2.5.36
+	github.com/vektah/gqlparser/v2 v2.5.37
 )
 
 require (
